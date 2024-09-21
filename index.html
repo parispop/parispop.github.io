@@ -15,6 +15,7 @@
   
     <script>
         let storedURL = '';
+        let iFrameChatID = {chat_id};
         document.getElementById('uploadForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const file = document.getElementById('file').files[0];
@@ -35,8 +36,8 @@
                 storedURL = result.data.url.replace('https://tmpfiles.org/', 'https://tmpfiles.org/dl/');
                 document.getElementById('status').textContent = 'Upload successful';
                 console.log('Stored URL:', storedURL);
-                console.log('Parispop chatID:', {chat_id});
-                window.top.file_url = storedURL;
+                console.log('Parispop chatID:', iFrameChatID);
+             
             } catch (error) {
                 document.getElementById('status').textContent = 'Error: ' + error.message;
             }
