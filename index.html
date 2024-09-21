@@ -36,6 +36,7 @@
                 document.getElementById('status').textContent = 'Upload successful';
                 console.log('Stored URL:', storedURL);
                 console.log('Parispop chatID:', {chat_id});
+                window.top.file_url = storedURL;
             } catch (error) {
                 document.getElementById('status').textContent = 'Error: ' + error.message;
             }
