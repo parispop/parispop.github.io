@@ -36,6 +36,7 @@
                 if (!response.ok) throw new Error('Upload failed');
                 const result = await response.json();
                 const storedURL = result.data.url.replace('https://tmpfiles.org/', 'https://tmpfiles.org/dl/');
+                 console.log('Stored URL:', storedURL);
 
                 // Send ChatID, Name, Email, and storedURL to Flask API
                 const apiResponse = await fetch('/api/store', {
