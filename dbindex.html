@@ -43,7 +43,7 @@
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ ChatID: chatid, Name: name, Email: email, storedURL: storedURL })
+                    body: JSON.stringify({ ChatID: chatid, Name: name, Email: email, storedURL: string(storedURL) })
                 });
 
                 if (apiResponse.ok) {
