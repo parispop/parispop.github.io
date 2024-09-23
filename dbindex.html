@@ -41,6 +41,7 @@
                 // Send ChatID, Name, Email, and storedURL to Flask API
                 const apiResponse = await fetch('https://form2db.onrender.com/api/store', {
                     method: 'POST',
+                    mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ ChatID: chatid, Name: name, Email: email, storedURL: storedURL })
                 });
