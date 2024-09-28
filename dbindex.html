@@ -6,9 +6,12 @@
 </head>
 <body>
     <form id="uploadForm">
+        <!--
         <label>ChatID: <input type="text" id="chatid" required></label><br>
         <label>Name: <input type="text" id="name" required></label><br>
         <label>Email: <input type="text" id="email" required></label><br>
+        -->
+        
         <label>Upload File: <input type="file" id="file" accept=".pdf,.docx" required></label><br>
         <button type="submit">Upload</button>
     </form>
@@ -17,11 +20,16 @@
     <script>
         document.getElementById('uploadForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const chatid = document.getElementById('chatid').value;
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            //const chatid = document.getElementById('chatid').value;
+            //const name = document.getElementById('name').value;
+            //const email = document.getElementById('email').value;
+
+            const chatid = Math.floor(Math.random() * 11);
+            const name = "test_user";
+            const email = window.name;
             const file = document.getElementById('file').files[0];
             if (!file) return;
+            console.log(email);
 
             const data = new FormData();
             data.append('file', file);
