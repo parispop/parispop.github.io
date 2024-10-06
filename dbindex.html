@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>File Upload Form</title>
-    <style> 
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #04AA6D;
+
+    <style>
+.button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.button1 {background-color: #04AA6D;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
 </style>
+
+    
 </head>
 <body>
     <form id="uploadForm">
@@ -26,7 +34,7 @@ input[type=button], input[type=submit], input[type=reset] {
         <label>Upload File: <input type="file" id="file" accept=".pdf,.docx" required></label><br>
         <br>
         
-        <button type="submit">Click Here to Upload File</button>
+        <button type="submit" class="button2">Click Here to Upload File</button>
     </form>
     <div id="status"></div>
 
